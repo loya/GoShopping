@@ -11,7 +11,7 @@ namespace GoShopping.Business
     {
         [Display(Name="影片代码")]
         [Required(ErrorMessage="{0}不可空白")]
-        [StringLength(11,ErrorMessage="{0}必须是{1}个字符")]
+        [StringLength(11,MinimumLength=11,ErrorMessage="{0}必须是{1}个字符")]
         [UIHint("Video")]
         public string Id { get; set; }
 

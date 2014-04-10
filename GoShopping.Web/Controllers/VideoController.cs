@@ -49,7 +49,7 @@ namespace GoShopping.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Destroy(int id)
+        public ActionResult Destroy(object id)
         {
             UoW.Videos.Delete(id);
             UoW.Save();

@@ -2,9 +2,8 @@
 @{
     ViewBag.Title = "Index";
 }
-
 @(Html.Kendo().Grid(Model)
-    .Name("Video")
+    .Name("Video")    
     .Columns(c =>
     {
         c.Command(p => p.Edit());
