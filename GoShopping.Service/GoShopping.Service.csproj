@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E9F79F65-9A12-4E24-B8E0-673651713C93}</ProjectGuid>
+    <ProjectGuid>{CF23715F-EE09-47D6-8914-919A4140D618}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Keigen.Utility</RootNamespace>
-    <AssemblyName>Keigen.Utility</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>GoShopping.Service</RootNamespace>
+    <AssemblyName>GoShopping.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,9 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneralRepository.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="GoShoppingUow.cs" />
+    <Compile Include="IGoShoppingUow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoShopping.Business\GoShopping.Business.csproj">
+      <Project>{0629bcb5-f992-4fd1-9810-e7a803cbad3e}</Project>
+      <Name>GoShopping.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Goshopping.Data\GoShopping.Data.csproj">
+      <Project>{ffb0a99c-1740-4e29-8d44-941ff5a45106}</Project>
+      <Name>GoShopping.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Keigen.Utility\Keigen.Utility.csproj">
+      <Project>{e9f79f65-9a12-4e24-b8e0-673651713c93}</Project>
+      <Name>Keigen.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

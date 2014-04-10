@@ -66,12 +66,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GoShopping\GoShopping.csproj">
-      <Project>{BD16D155-0C3B-42F5-8406-23FE361BE913}</Project>
-      <Name>GoShopping</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <Choose>

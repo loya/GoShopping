@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GoShopping.Business.Video>
+@{
+    ViewBag.Title = "Index";
+}
+
+@(Html.Kendo().Grid(Model)
+    .Name("Video")
+    .Columns(c =>
+    {
+        c.Command(p => p.Edit());
+        c.Bound(p => p.Id).Width(310);
+        c.Bound(p => p.Title);
+        c.Bound(p => p.StartDate);
+        c.Bound(p => p.EndDate);
+        c.Command(p => p.Destroy());
+    })
+    .ToolBar(toolbar => toolbar.Create())
+    .Editable(e => e.Mode(GridEditMode.PopUp))
+    .DataSource(d => d.Server()
+        .Model(m =>
+        {
+            m.Id("Id");
+            m.Field(f => f.StartDate).DefaultValue(DateTime.Today);
+            m.Field(f => f.EndDate).DefaultValue(DateTime.Today.AddDays(15));
+        })
+        .Create("Create", "Video")
+        .Update("Update", "Video")
+        .Destroy("Destroy", "Video")
+        )
+)
+
+@*@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
